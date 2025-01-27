@@ -729,8 +729,13 @@ body{
     font-size: clamp(10px, 3vw, 28px);
 }
 
+
+/*<!-- ------------------------------------------------------>
+  <!-- ------------------ CSS Tips Box ---------------------->
+  <!-- ------------------------------------------------------>*/
+
 .redBackground{
-    background-color: #E82723;
+    background-color: var(--background-color);
     padding-bottom: 2%;
     margin-top: 20%;
 }
@@ -831,10 +836,14 @@ body{
 }
 
 
+/*<!-- ------------------------------------------------------>
+  <!-- ------------- CSS Slider marque ---------------------->
+  <!-- ------------------------------------------------------>*/
+
 .slider-marque{
     position: relative;
     padding-bottom: 15%;
-    background-color: #E82723;
+    background-color: var(--background-color);
     width: 100%;
     margin-left: auto;
     margin-right: auto;
@@ -881,6 +890,8 @@ body{
         left: -10%;
     }
 }
+
+/*Ajout du delay pour espacer les différents items*/
 .button-marque:nth-child(1) {
     animation-delay: calc(30s / 10 * (10 - 1) * -1);
 }
@@ -912,10 +923,12 @@ body{
     animation-delay: calc(30s / 10 * (10 - 10) * -1);
 }
 
-
+.button-marque:hover{
+    transform: scale(1.1); /*Agrandissement lors du survol de la souris*/
+}
 
 .sidebar{
-    position: fixed;
+    position: fixed; /*Reste fix peut importe la position de la page*/
     bottom: 0;
     z-index: 100;
     margin: 5%;
